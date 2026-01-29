@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugadores + Marcador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <!-- SECCION MARCADOR -->
+    <h1>Marcador molón</h1>
+
+    <!-- Datos equipos -->
+    <form id="form-nombres">
+        <label for="input1">Equipo local:</label>
+        <input type="text" id="input1" placeholder="Equipo local aquí">
+
+        <label for="input2">Equipo visitante:</label>
+        <input type="text" id="input2" placeholder="Equipo visitante aquí">
+
+        <button type="submit">Guardar nombres</button>
+    </form>
+
+    <!-- Marcador -->
+    <div class="equipo" id="equipo1">
+        <h2 class="nombre" id="local">Local</h2>
+        <p class="puntos" id="puntos1">0</p>
+
+        <button data-equipo="1" data-suma="1">+1</button>
+        <button data-equipo="1" data-suma="2">+2</button>
+        <button data-equipo="1" data-suma="3">+3</button>
+    </div>
+
+    <div class="equipo" id="equipo2">
+        <h2 class="nombre" id="visitante">Visitante</h2>
+        <p class="puntos" id="puntos2">0</p>
+
+        <button data-equipo="2" data-suma="1">+1</button>
+        <button data-equipo="2" data-suma="2">+2</button>
+        <button data-equipo="2" data-suma="3">+3</button>
+    </div>
+
+    <button id="reset">Reset Marcador</button>
+
+    <ul id="lista-historial"></ul>
+
+
+    <!-- ========================= -->
+    <!--   SECCIÓN: JUGADORES      -->
+    <!-- ========================= -->
+
+    <main class="contenedor">
+
+        <h1>Lista de jugadores</h1>
+
+        <div id="listaForm">
+
+            <label for="jugador">Nombre del jugador</label>
+            <input type="text" id="jugador" placeholder="Ej: Jose">
+            <button id="btnAñadir">Añadir</button>
+
+            <div class="mensajes"></div>
+
+            <h2>Convocados</h2>
+            <ul id="listaJugadores"></ul>
+
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+    <script src="marcador.js"></script>
+
+</body>
+
+</html>
